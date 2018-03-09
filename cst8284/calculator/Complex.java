@@ -73,8 +73,8 @@ public class Complex {
 	// when the output should be 3.0 - 2.0i.)
   public String toString() {
     if(this.getImag() < 0)
-      return String.format("%.2f - %.2fi", this.getReal(), this.getImag() * -1); // imaginary to positive for output only
-    return String.format("%.2f + %.2fi", this.getReal(), this.getImag());
+      return String.format("%.1f - %.1fi", this.getReal(), this.getImag() * -1); // imaginary to positive for output only
+    return String.format("%.1f + %.1fi", this.getReal(), this.getImag());
   }
 	
 	// OPTIONAL: if attempting Bonus A, put your public isZero() method, with 
