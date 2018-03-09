@@ -6,6 +6,8 @@ public class ComplexCalculator {
   private Complex c; // stores result of current calculation for use in next
                      // calculation
 
+  public ComplexCalculator() {}
+  
   public ComplexCalculator(Complex c1, Complex c2) {
     System.out.println("Which math operation do you wish to perform?  Enter +, -, *, /");
     char mathOp = op.nextLine().charAt(0);

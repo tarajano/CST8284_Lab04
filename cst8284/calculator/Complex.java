@@ -4,7 +4,8 @@ public class Complex {
 	private double real = 0;
 	private double imag = 0;
 	private static int counter = 0; 
-	
+  private static final double DELTA = 0.00000001;
+
 	// Complex constructor that takes in a single string, e.g. "2-4i"
 	public Complex(String cStr){
 		this(cStr.split("(?=\\+)|(?=\\-)"));  // splits cStr at + or - into an array of strings having two elements
@@ -91,6 +92,34 @@ public class Complex {
   public Complex conjugate() {
     return new Complex(this.getReal(), this.getImag() * -1);
   }
+  
+  // Method signature modified from Lab04 requirements
+  // to take a second argument (double) for delta.
+  public boolean equals(Complex that, double d) {
+    double delta = d;
+    double deltaReal = Math.abs(this.getReal() - that.getReal());
+    double deltaImag = Math.abs(this.getImag() - that.getImag());
+    
+    if (deltaReal > delta || deltaImag > delta)
+      return false;
+    
+    return true;  
+  }
+  
+  public boolean equals(double real, double imag, double delta) {
+    return this.equals(new Complex(real, imag), delta);
+  }
+  
+  public boolean equals(int real, int imag) {
+    return this.equals(new Complex(real, imag), DELTA);
+  }
+
+  public boolean equals(String c) {
+    return this.equals(new Complex(c), DELTA);
+  }
+  
+  
+  
 	
 
 
