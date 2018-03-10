@@ -26,7 +26,7 @@ public class TestComplexCalculator {
    * I've implemented toString() to display only one decimal place (matching Lab03's 1st test case)   
    */
   @Test
-  public void testComplexEqualsComplex() {
+  public void exc5TestComplexEqualsComplex() {
     Complex cnExpected = new Complex(-0.625,2.375);
     ComplexCalculator cCalc = new ComplexCalculator();
     Complex cnActual = cCalc.divide(new Complex(7,12), new Complex(4.0,-4.0));

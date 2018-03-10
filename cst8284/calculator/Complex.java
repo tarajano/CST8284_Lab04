@@ -8,7 +8,7 @@ public class Complex {
 
 	// Complex constructor that takes in a single string, e.g. "2-4i"
 	public Complex(String cStr){
-		this(cStr.split("(?=\\+)|(?=\\-)"));  // splits cStr at + or - into an array of strings having two elements
+		this(cStr.replaceAll(" ", "").split("(?=\\+)|(?=\\-)"));  // splits cStr at + or - into an array of strings having two elements
 		// The first element of the resultant array will be the real portion, 
 		// while the second is the imaginary portion.  This array is passed to the next constructor.
 	}
