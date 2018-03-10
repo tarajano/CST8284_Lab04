@@ -93,8 +93,17 @@ public class Complex {
     return new Complex(this.getReal(), this.getImag() * -1);
   }
   
-  // Method signature modified from Lab04 requirements
-  // to take a second argument (double) for delta.
+  public boolean equals(Complex that) {
+    double deltaReal = Math.abs(this.getReal() - that.getReal());
+    double deltaImag = Math.abs(this.getImag() - that.getImag());
+    
+    if (deltaReal > DELTA || deltaImag > DELTA)
+      return false;
+    
+    return true;  
+  }
+  
+  // Overloaded method to take a second argument (double) for delta.
   public boolean equals(Complex that, double d) {
     double delta = d;
     double deltaReal = Math.abs(this.getReal() - that.getReal());

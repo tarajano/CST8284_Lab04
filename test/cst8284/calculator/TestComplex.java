@@ -1,11 +1,8 @@
 package test.cst8284.calculator;
 
-import test.cst8284.calculator.*;
-
-import static org.junit.Assert.*;
-
 import org.junit.Test;
-
+import static org.junit.Assert.*;
+import test.cst8284.calculator.*;
 import cst8284.calculator.Complex;
 
 public class TestComplex {
@@ -52,8 +49,6 @@ public class TestComplex {
     Complex cn = new Complex("3+2i");
     assertFalse(cn.equals("3+1i"));
   }
-  
-  // COMMIT !!!!
   
 }
 
